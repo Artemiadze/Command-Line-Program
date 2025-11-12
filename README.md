@@ -20,9 +20,9 @@
 Make sure you have [Rust](https://www.rust-lang.org/tools/install) and Cargo installed.
 
 ```bash
-git clone <repo_url>
+git clone https://github.com/Artemiadze/Command-Line-Program.git
 cd minigrep
-cargo build --release
+cargo build
 ```
 
 The compiled binary will appear in `target/release/minigrep`.
