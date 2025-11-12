@@ -12,12 +12,9 @@ fn main() {
         println!("Problem parsing arguments: {err}");
         process::exit(1);
     });
-
-    println!("Searching for {0}", config.query);
-    println!("In file {0}", config.file_path);
-
-    if let Err(e) = run(config) {
-            println!("Application error: {e}");
-            process::exit(1);
+    
+    if let Err(e) = minigrep::run(config) {
+        eprintln!("Application error: {e}");
+        process::exit(1);
     }
 }
