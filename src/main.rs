@@ -8,7 +8,8 @@ fn main() {
     // Collecting the command line arguments into a vector
     let args: Vec<String> = env::args().collect();
 
-    let config = Config::build(&args).unwrap_or_else(|err| {
+    // env::args() provides an iterator over the arguments
+    let config = Config::build(env::args).unwrap_or_else(|err| {
         println!("Problem parsing arguments: {err}");
         process::exit(1);
     });
